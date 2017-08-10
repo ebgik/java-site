@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import ru.pandn.model.User;
 import ru.pandn.model.UserList;
-import ru.pandn.processing.impl.UserServiceImpl;
+import ru.pandn.service.impl.UserServiceImpl;
 
 import static ru.pandn.view.ViewNames.MAIN_ACTION;
 

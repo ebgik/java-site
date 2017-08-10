@@ -1,4 +1,4 @@
-package ru.pandn.processing.impl;
+package ru.pandn.service.impl;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ru.pandn.model.User;
 import ru.pandn.model.UserList;
-import ru.pandn.processing.UserService;
+import ru.pandn.service.UserService;
 import ru.pandn.repository.UserRepository;
 
 import java.util.List;

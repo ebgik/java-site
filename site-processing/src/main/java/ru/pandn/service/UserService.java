@@ -1,4 +1,4 @@
-package ru.pandn.processing;
+package ru.pandn.service;
 
 import ru.pandn.model.User;
 import ru.pandn.model.UserList;

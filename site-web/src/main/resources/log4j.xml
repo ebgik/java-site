@@ -17,7 +17,7 @@
 	<logger name="ru.pandn.repository">
 		<level value="info" />
 	</logger>
-	<logger name="ru.pandn.processing">
+	<logger name="ru.pandn.service">
 		<level value="info" />
 	</logger>
 	<!---->
