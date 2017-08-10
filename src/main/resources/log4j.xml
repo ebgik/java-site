@@ -14,6 +14,12 @@
 	<logger name="ru.pandn.controller">
 		<level value="info" />
 	</logger>
+	<logger name="ru.pandn.repository">
+		<level value="info" />
+	</logger>
+	<logger name="ru.pandn.processing">
+		<level value="info" />
+	</logger>
 	<!---->
 	<!--&lt;!&ndash; 3rdparty Loggers &ndash;&gt;-->
 	<!--<logger name="org.springframework.core">-->
