@@ -26,10 +26,8 @@ public class HomeController {
 	@RequestMapping(value = MAIN_ACTION, method = RequestMethod.GET)
 	public String getIndexPage(Model model) {
 		logger.info("getIndexPage()");
-
 		UserList users = userService.getUsers();
 		model.addAttribute("users",users);
-
 		return MAIN_ACTION;
 	}
 

@@ -14,20 +14,9 @@ import java.sql.SQLException;
 import java.util.List;
 
 @Repository
-public class UserRepository {
+public class UserRepository extends InitRepository {
 
     private static final Logger logger = LoggerFactory.getLogger(UserRepository.class);
-
-    @Autowired
-    DataSource dataSource;
-
-    private JdbcTemplate jdbc;
-
-    @PostConstruct
-    public void init() {
-        logger.info("UserRepository init()");
-        jdbc = new JdbcTemplate(dataSource);
-    }
 
     public List<User> getUsers() throws SQLException{
         final String SQL = "SELECT * FROM users";
