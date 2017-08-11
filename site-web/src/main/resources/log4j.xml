@@ -20,6 +20,9 @@
 	<logger name="ru.pandn.service">
 		<level value="info" />
 	</logger>
+	<logger name="ru.pandn.preparer">
+		<level value="info" />
+	</logger>
 	<!---->
 	<!--&lt;!&ndash; 3rdparty Loggers &ndash;&gt;-->
 	<!--<logger name="org.springframework.core">-->

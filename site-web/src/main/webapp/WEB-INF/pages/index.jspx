@@ -1,14 +1,30 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <jsp:root xmlns:jsp="http://java.sun.com/JSP/Page"
-		  version="2.0">
+		  xmlns:form="http://www.springframework.org/tags/form"
+		  version="2.0" xmlns:c="http://java.sun.com/jsp/jstl/core">
 	<jsp:directive.page contentType="text/html;charset=UTF-8"/>
 	<jsp:output omit-xml-declaration="yes"/>
 
-	<!--@elvariable id="users" type="ru.pandn.model.UserList"-->
 	<!--@elvariable id="user" type="ru.pandn.model.User"-->
+	<!--@elvariable id="users" type="ru.pandn.model.UserList"-->
 
-	<p>Users: ${users}</p>
 
-	<p>User: ${user}</p>
+	<c:if test="${not empty user_create}">
+		<form:form action='${ViewNames.get("ADD_USER")}' method="post" modelAttribute="user_create">
+			<form:input path="name"/>
+			<form:button>Submit</form:button>
+		</form:form>
+	</c:if>
+
+	<c:if test="${not empty users.users}">
+		<c:forEach var="user" items="${users.users}">
+			<p>User: ${user.name} <a href='${ViewNames.get("DELETE_USER")}/${user.id}'>x</a></p>
+		</c:forEach>
+	</c:if>
+
+	<c:if test="${empty users.users}">
+		<p>User: ${user.name} <a href='${ViewNames.get("DELETE_USER")}/${user.id}'>x</a></p>
+	</c:if>
+
 
 </jsp:root>

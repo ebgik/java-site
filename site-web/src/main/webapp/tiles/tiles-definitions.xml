@@ -7,7 +7,8 @@
     <definition name="block-header" template="/tiles/block/header.jsp"/>
     <definition name="block-footer" template="/tiles/block/footer.jsp"/>
 
-    <definition name="template-default" template="/tiles/layout.jspx">
+    <definition name="template-default" template="/tiles/layout.jspx"
+                preparer="ru.pandn.preparer.ViewNamesPreparer">
         <put-attribute name="header" value="block-header"/>
         <put-attribute name="footer" value="block-footer"/>
     </definition>

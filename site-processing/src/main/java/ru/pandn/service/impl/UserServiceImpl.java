@@ -44,4 +44,24 @@ public class UserServiceImpl implements UserService {
         return user;
     }
 
+    public boolean addNewUser(final User user) {
+        logger.info("UserServiceImpl(): addNewUser(): user:{}",user);
+        try {
+            return userRepository.addNewUser(user);
+        } catch (Exception e) {
+            logger.error("addNewUser(): error:{}",e.getMessage());
+        }
+        return false;
+    }
+
+    public boolean deleteUser(final Integer userId) {
+        logger.info("UserServiceImpl(): deleteUser(): userId:{}",userId);
+        try {
+            return userRepository.deleteUser(userId);
+        } catch (Exception e) {
+            logger.error("deleteUser(): error:{}",e.getMessage());
+        }
+        return false;
+    }
+
 }
